@@ -8,6 +8,8 @@ app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
 });
 
+app.use(express.static("public"));
+
 app.get("/", (req, res) => {
   console.log("got a request for /");
   // res.send("Hi there, everyone!");
